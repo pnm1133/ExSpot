@@ -38,7 +38,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$rootProject.androidsupport"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.androidsupportConstranit"
     implementation "com.android.support:design:$rootProject.androidsupport"
-
+    //Rx java
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
 
@@ -47,10 +47,22 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:$rootProject.googleService"
     implementation "com.google.android.gms:play-services-places:$rootProject.googleService"
 
-    implementation "com.google.dagger:dagger:2.8"
-    annotationProcessor "com.google.dagger:dagger-compiler:2.8"
+    //google firebase
+    implementation "com.google.firebase:firebase-auth:$rootProject.googleService"
+
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //font
+    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
+
+    implementation "com.google.dagger:dagger:$rootProject.googleDaggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.googleDaggerVersion"
     provided 'javax.annotation:jsr250-api:1.0'
     implementation 'javax.inject:javax.inject:1'
+
+    //butter knife
+    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnifeVersion"
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:support-v4:27.1.0'
@@ -59,3 +71,5 @@ dependencies {
     androidTestCompile 'com.android.support.test:rules:1.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -8,8 +8,15 @@ project.ext{
     androidsupport = '27.1.0'
 
     googleService = '12.0.0'
+    googleDaggerVersion = '2.8'
+
+    butterKnifeVersion = '8.8.1'
 
     rxJavaVersion = '2.1.9'
     rxAndroidVersion = '2.0.2'
     guavaVersion = '23.5-android'
+
+    gsonVersion = '2.8.2'
+
+    calligraphyVersion = '2.3.0'
 }

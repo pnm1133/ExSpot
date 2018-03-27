@@ -10,6 +10,8 @@ public interface BaseView {
 
     void loadIndicatorConnection();
 
+    void hideLoadIndicatorConnection();
+
     boolean isInternetConnection();
 
     void errorInternetConnection();

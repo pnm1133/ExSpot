@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "527938604109",
+    "firebase_url": "https://findshop-4cfa5.firebaseio.com",
+    "project_id": "findshop-4cfa5",
+    "storage_bucket": "findshop-4cfa5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527938604109:android:6c66b2ae50dfdf60",
+        "android_client_info": {
+          "package_name": "com.example.nguyephan.findshopspot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527938604109-mc1io2vsk705sadgjo83b3hededpe1qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nguyephan.findshopspot",
+            "certificate_hash": "4a25afea637832bad02ce3edb3892949d6c62921"
+          }
+        },
+        {
+          "client_id": "527938604109-qenbi04s6lehugtbjgc2iut5k3l1fpc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ7cnuvA40JIO9u94zO-CVRllTlXsMxwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527938604109-qenbi04s6lehugtbjgc2iut5k3l1fpc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

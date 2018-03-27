@@ -1,31 +1,25 @@
 package com.example.nguyephan.findshopspot.presentation.start;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.nguyephan.findshopspot.R;
-import com.example.nguyephan.findshopspot.data.pojo.UserResponse;
-import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManager;
-import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManagerImp;
-import com.example.nguyephan.findshopspot.data.respository.local.UserRepositoryCacheImp;
 import com.example.nguyephan.findshopspot.presentation.base.BaseActivity;
-import com.example.nguyephan.findshopspot.presentation.base.BaseView;
 import com.example.nguyephan.findshopspot.presentation.login.LoginFragment;
-import com.example.nguyephan.findshopspot.ultis.scheduler.SchedulerProvider;
+import com.example.nguyephan.findshopspot.presentation.register.RegisterFragment;
+import com.example.nguyephan.findshopspot.ultis.common.CommonFr;
 
 import javax.inject.Inject;
 
-import io.reactivex.disposables.CompositeDisposable;
-
 public class StartActivity extends BaseActivity implements StartContact.View,
         LoginFragment.OnFragmentInteractionListener,
-        StartFragment.OnFragmentInteractionListener  {
+        StartFragment.OnFragmentInteractionListener ,
+        RegisterFragment.OnFragmentInteractionListener {
 
     private static final String LOGIN_PAGE_TAG = "loginPage";
     private static final String HOME_PAGE_TAG = "homePage";
+    private static final String REGISTER_PAGE_TAG = "registerPage";
 
     @Inject
     StartContact.Presenter<StartContact.View> presenter;

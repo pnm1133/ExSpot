@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:focusable="true"
     android:background="@android:color/transparent"
     >
 
@@ -20,18 +19,20 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TextView
+            android:id="@+id/tv_content"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/material_padding_16dp"
             android:layout_marginStart="@dimen/material_padding_16dp"
             android:layout_marginTop="52dp"
-            android:text="Please Sure Your GPS Is Turn On"
+            android:text="@string/please_check_your_internet_connection"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/tv_title"
             android:textAppearance="@style/TextAppearance.Text.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +53,7 @@
             android:layout_marginEnd="@dimen/material_padding_16dp"
             android:layout_marginRight="@dimen/material_padding_16dp"
             android:layout_marginTop="@dimen/material_padding_16dp"
-            android:text="Setting"
+            android:text="@string/try_again"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -71,4 +72,5 @@
             app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>

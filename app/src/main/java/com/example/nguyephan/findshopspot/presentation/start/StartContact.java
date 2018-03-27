@@ -1,8 +1,7 @@
 package com.example.nguyephan.findshopspot.presentation.start;
 
-import com.example.nguyephan.findshopspot.data.pojo.UserResponse;
 import com.example.nguyephan.findshopspot.di.PerActivity;
-import com.example.nguyephan.findshopspot.presentation.base.BasePresenterItf;
+import com.example.nguyephan.findshopspot.presentation.base.BasePresenter;
 import com.example.nguyephan.findshopspot.presentation.base.BaseView;
 
 /**
@@ -19,7 +18,7 @@ public interface StartContact {
     }
 
     @PerActivity
-    interface Presenter<V extends BaseView> extends BasePresenterItf<V>{
+    interface Presenter<V extends BaseView> extends BasePresenter<V> {
 
         void startLogin();
 

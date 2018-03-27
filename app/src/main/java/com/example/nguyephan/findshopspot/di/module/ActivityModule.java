@@ -2,13 +2,16 @@ package com.example.nguyephan.findshopspot.di.module;
 
 import android.content.Context;
 
-import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManager;
 import com.example.nguyephan.findshopspot.di.ActivityContext;
 import com.example.nguyephan.findshopspot.di.PerActivity;
 import com.example.nguyephan.findshopspot.presentation.base.BaseActivity;
-import com.example.nguyephan.findshopspot.presentation.start.StartActivity;
+import com.example.nguyephan.findshopspot.presentation.login.LoginContact;
+import com.example.nguyephan.findshopspot.presentation.login.LoginPresenter;
+import com.example.nguyephan.findshopspot.presentation.register.RegisterFragment;
+import com.example.nguyephan.findshopspot.presentation.register.RegisterFragmentContact;
+import com.example.nguyephan.findshopspot.presentation.register.RegisterPresenter;
 import com.example.nguyephan.findshopspot.presentation.start.StartContact;
-import com.example.nguyephan.findshopspot.presentation.start.StartPresenter;
+import com.example.nguyephan.findshopspot.presentation.start.StartPresenterApp;
 import com.example.nguyephan.findshopspot.ultis.scheduler.BaseSchedulerProvider;
 import com.example.nguyephan.findshopspot.ultis.scheduler.SchedulerProvider;
 
@@ -47,7 +50,19 @@ public class ActivityModule {
 
     @Provides
     @PerActivity
-    StartContact.Presenter<StartContact.View> provideStartPresenter(StartPresenter<StartContact.View> presenter){
+    StartContact.Presenter<StartContact.View> provideStartPresenter(StartPresenterApp<StartContact.View> presenter){
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    LoginContact.Presenter<LoginContact.View> provideLoginPresenter(LoginPresenter<LoginContact.View> presenter){
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    RegisterFragmentContact.Presenter<RegisterFragmentContact.View> provideRegisterPresenter(RegisterPresenter<RegisterFragmentContact.View> presenter){
         return presenter;
     }
 

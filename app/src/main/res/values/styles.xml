@@ -13,10 +13,42 @@
     <style name="App.Button" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/bg_booder</item>
         <item name="android:textColor">@color/colorBtnStart</item>
+        <item name="android:textAppearance">@style/TextAppearance.Text.Bold</item>
         <item name="android:textSize">16sp</item>
         <item name="android:height">48dp</item>
         <item name="android:width">0dp</item>
         <item name="android:radius">2dp</item>
+    </style>
+
+    <style name="App.btnDialogError" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Text.Bold</item>
+    </style>
+
+    <style name="App.edtRegister" parent="Base.TextAppearance.AppCompat">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Text.Bold</item>
+    </style>
+
+
+    <style name="TextAppearance.Text.Regular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SourceSansPro-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Text.Bold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SourceSansPro-Bold.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Text.Light" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SourceSansPro-Light.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Text.Italic" parent="android:TextAppearance">
+        <item name="fontPath">fonts/SourceSansPro-Italic.ttf</item>
     </style>
 
 </resources>

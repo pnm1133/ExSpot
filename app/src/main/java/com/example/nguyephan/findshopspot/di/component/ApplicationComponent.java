@@ -6,9 +6,8 @@ import android.content.SharedPreferences;
 
 import com.example.nguyephan.findshopspot.FindShopApplication;
 import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManager;
-import com.example.nguyephan.findshopspot.data.respository.local.UserRepositoryCache;
+import com.example.nguyephan.findshopspot.data.respository.local.PreferenceCache;
 import com.example.nguyephan.findshopspot.di.ApplicationContext;
-import com.example.nguyephan.findshopspot.di.RepositoryInfo;
 import com.example.nguyephan.findshopspot.di.module.ApplicationModule;
 
 import javax.inject.Singleton;
@@ -27,7 +26,7 @@ public interface ApplicationComponent {
     @ApplicationContext
     Context getContext();
 
-    UserRepositoryCache getUserRepositoryCache();
+    PreferenceCache getUserRepositoryCache();
 
     RepositoryManager getRepositoryManager();
 

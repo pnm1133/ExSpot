@@ -5,18 +5,19 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManager;
-import com.example.nguyephan.findshopspot.data.respository.Manager.RepositoryManagerImp;
-import com.example.nguyephan.findshopspot.data.respository.local.UserRepositoryCache;
-import com.example.nguyephan.findshopspot.data.respository.local.UserRepositoryCacheImp;
-import com.example.nguyephan.findshopspot.data.respository.userrespository.UserRepository;
+import com.example.nguyephan.findshopspot.data.respository.Manager.AppRepositoryManager;
+import com.example.nguyephan.findshopspot.data.respository.api.AppUserLoginApi;
+import com.example.nguyephan.findshopspot.data.respository.api.UserLoginApi;
+import com.example.nguyephan.findshopspot.data.respository.local.PreferenceCache;
+import com.example.nguyephan.findshopspot.data.respository.local.AppPreferenceCache;
 import com.example.nguyephan.findshopspot.di.ApplicationContext;
-import com.example.nguyephan.findshopspot.di.RepositoryInfo;
 import com.example.nguyephan.findshopspot.ultis.common.CommonUtils;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * Created by nguye phan on 3/22/2018.
@@ -42,19 +43,33 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    UserRepositoryCache provideUserRepositoryCache(UserRepositoryCacheImp userRepositoryCacheImp){
-        return userRepositoryCacheImp;
+    PreferenceCache provideUserRepositoryCache(AppPreferenceCache appPreferenceCache){
+        return appPreferenceCache;
     }
 
     @Provides
     @Singleton
-    RepositoryManager provideRepositoryManager(RepositoryManagerImp repositoryManager){
+    RepositoryManager provideRepositoryManager(AppRepositoryManager repositoryManager){
         return repositoryManager;
+    }
+
+    @Provides
+    @Singleton
+    UserLoginApi provideUserLoginApi(){
+        return new AppUserLoginApi();
     }
 
     @Provides
     Application provideApplication(){
         return application;
+    }
+
+    @Provides
+    CalligraphyConfig provideCalligraphyConfig(){
+        return new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/SourceSansPro-Regular.ttf")
+                .setFontAttrId(uk.co.chrisjenx.calligraphy.R.attr.fontPath)
+                .build();
     }
 
 }

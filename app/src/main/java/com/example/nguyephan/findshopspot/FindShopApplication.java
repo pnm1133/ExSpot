@@ -9,6 +9,8 @@ import com.example.nguyephan.findshopspot.di.module.ApplicationModule;
 
 import javax.inject.Inject;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 
 /**
  * Created by nguye phan on 3/22/2018.
@@ -21,6 +23,9 @@ public class FindShopApplication extends Application {
 //    @Inject
 //    RepositoryManager mRepositoryManager;
 
+    @Inject
+    CalligraphyConfig mCalligraphyConfig;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -28,6 +33,8 @@ public class FindShopApplication extends Application {
                 .applicationModule(new ApplicationModule(this)).build();
 
         mApplicationComponent.inject(this);
+
+        CalligraphyConfig.initDefault(mCalligraphyConfig);
     }
 
     public ApplicationComponent getApplicationComponent(){
